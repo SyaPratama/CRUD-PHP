@@ -5,7 +5,7 @@ $mahasiswa = query($query);
 
 // Search Handle
 if (isset($_GET["keyword"])) {
-    $dataPerHalaman = 2;
+    $dataPerHalaman = 10;
     $keyword = $_GET["keyword"];
     $jumlahData = count(cari($keyword));
     $jumlahHalaman = ceil($jumlahData / $dataPerHalaman);
@@ -13,7 +13,7 @@ if (isset($_GET["keyword"])) {
     $urutHalamanAwal = ($dataPerHalaman * $halamanActive) - $dataPerHalaman;
     $mahasiswa = query("SELECT * FROM mahasiswa WHERE nama LIKE '%$keyword%' LIMIT $urutHalamanAwal,$dataPerHalaman");
 } else {
-    $dataPerHalaman = 2;
+    $dataPerHalaman = 10;
     $jumlahData = count(query($query));
     $jumlahHalaman = ceil($jumlahData / $dataPerHalaman);
     $halamanActive = isset($_GET["page"]) ? $_GET["page"] : 1;
