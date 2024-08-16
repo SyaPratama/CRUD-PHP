@@ -45,7 +45,7 @@ if (isset($_POST["tambah"])) {
       </div>
       <div class="wrap-input">
         <label for="nis" class="label">Nis <span class="star">*</span></label>
-        <input type="tel" name="nis" id="nis" required />
+        <input type="tel" name="nis" id="nis" required maxlength="6" minlength="6"/>
       </div>
       <div class="wrap-input">
         <label for="jurusan" class="label">Jurusan <span class="star">*</span></label>

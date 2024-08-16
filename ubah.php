@@ -52,7 +52,7 @@ if(isset($_POST["update"])){
         </div>
         <div class="wrap-input">
           <label for="nis" class="label">Nis <span class="star">*</span></label>
-          <input type="tel" name="nis" id="nis" autocomplete="off" value="<?=$mahasiswa["nis"]?>" />
+          <input type="tel" name="nis" id="nis" autocomplete="off" value="<?=$mahasiswa["nis"]?>" maxlength="6" minlength="6"/>
         </div>
         <div class="wrap-input">
           <label for="jurusan" class="label"
